@@ -21,31 +21,31 @@
 </script>
 
 <template>
-   <header class="container sans-narrow">
-    <div class="img-container">
-        <img src="../assets/img/dc-logo.png" alt="DC Logo">
+   <header class="sans-narrow">
+    <div class="container">
+        <div class="img-container">
+            <img src="../assets/img/dc-logo.png" alt="DC Logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li v-for="link, i in links" @click="isActive = i"  :class="isActive === i ? 'active' : ''">
+                    <a href="#">{{link.title.toUpperCase()}}</a>
+                    <div class="active-bar"></div>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav class="nav-links">
-        <ul>
-            <li v-for="link, i in links" @click="isActive = i"  :class="isActive === i ? 'active' : ''">
-                <a href="#">{{link.title.toUpperCase()}}</a>
-                <div class="active-bar"></div>
-            </li>
-        </ul>
-    </nav>
    </header>
 </template>
 
 <style lang="scss" scoped>
     @use '../style/partials/variables' as *;
 
-    header{
+    header div.container{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        background-color: $header-bg;
 
         .img-container > img{
             height: 80px;
