@@ -1,3 +1,7 @@
+@use '../style/partials/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
 *,
 ::before,
 ::after{
@@ -6,6 +10,27 @@
     box-sizing: border-box;
 }
 
-h1{
-    color:red;
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.sans-narrow{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+ul{
+    list-style-type: none;  
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+//nav-links
+nav.nav-links ul{
+    display: flex;
+    align-items: center;
+    li a{
+        text-decoration: none;
+    }                
 }
