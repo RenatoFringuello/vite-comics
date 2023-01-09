@@ -48,15 +48,19 @@
                 display: flex;
                 justify-content: space-between;
              
-                img{
-                    height: 50px;
-                    max-width: 50px;
-                    vertical-align: middle;
-                    margin-right: 1rem;
-                }
-                span{
-                    font-weight: 300;
-                    font-size: .85rem;
+                li{
+                    cursor: pointer;
+                    
+                    img{
+                        height: 50px;
+                        max-width: 50px;
+                        vertical-align: middle;
+                        margin-right: 1rem;
+                    }
+                    span{
+                        font-weight: 300;
+                        font-size: .85rem;
+                    }
                 }
             }
         }
