@@ -42,7 +42,7 @@
         color: white;
 
         .container{
-            padding:2.6rem;
+            padding:3rem 2rem;
 
             .nav-links ul{
                 display: flex;
