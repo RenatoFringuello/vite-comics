@@ -41,44 +41,47 @@
 <style lang="scss" scoped>
     @use '../style/partials/variables' as *;
 
-    header div.container{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    header {
+        background-color: white;
+        div.container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        .img-container > img{
-            height: 80px;
-        }
-
-        nav.nav-links ul li{
-            margin: 0 1rem;
-            padding: 50px 0;
-            position: relative;
-            text-align: center;
-            cursor: pointer;
-
-            &.active .active-bar,
-            &:hover .active-bar{
-                display: block;
-            }
-            &.active a{
-                color: $main-dc-color;;
+            .img-container > img{
+                height: 70px;
             }
 
-            a{
-                font-size: .8rem;
-                color: $main-text-color;
-                font-weight: bold;
-            }
-            .active-bar{
-                display: none;
+            nav.nav-links ul li{
+                margin: 0 1rem;
+                padding: 45px 0;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
 
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: .25rem;
-                background-color: $main-dc-color;
+                &.active .active-bar,
+                &:hover .active-bar{
+                    display: block;
+                }
+                &.active a{
+                    color: $main-dc-color;;
+                }
+
+                a{
+                    font-size: .8rem;
+                    color: $main-text-color;
+                    font-weight: bold;
+                }
+                .active-bar{
+                    display: none;
+
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: .25rem;
+                    background-color: $main-dc-color;
+                }
             }
         }
     }
