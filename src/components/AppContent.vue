@@ -17,7 +17,7 @@
         background-color: $content-bg;
         color:white;
         .container{
-            padding: 2.5rem 0;
+            padding: 2.5rem 1rem;
         }
     }
 </style>
