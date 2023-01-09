@@ -1,10 +1,11 @@
 <script setup>
+  import AppHeader from './components/AppHeader.vue';
 </script>
 
 <template>
-  <h1>Hello world</h1>
+  <AppHeader />
 </template>
 
-<style lang="scss" scoped>
-  @use './style/general.scss' as *
+<style lang="scss">
+  @use './style/general' as *;
 </style>
