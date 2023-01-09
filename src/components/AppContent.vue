@@ -14,7 +14,6 @@
     @use '../style/partials/variables' as *;
 
     section{
-        background-color: $content-bg;
         color:white;
         .container{
             padding: 2.5rem 1rem;
