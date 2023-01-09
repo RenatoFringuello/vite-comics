@@ -1,15 +1,17 @@
 <script setup>
   import AppHeader from './components/AppHeader.vue';
   import AppContent from './components/AppContent.vue';
-  import AppMainNav from './components/AppMainNav.vue';
+  import AppGeneralNav from './components/AppGeneralNav.vue';
 </script>
 
 <template>
   <AppHeader />
   <main>
     <AppContent />
-    <AppMainNav />
   </main>
+  <footer>
+    <AppGeneralNav />
+  </footer>
 </template>
 
 <style lang="scss">
