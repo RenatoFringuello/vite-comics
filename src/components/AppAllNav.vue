@@ -4,7 +4,7 @@
             return{
                 linksGroups:[
                     {contents:[
-                        {title:'DC COMICS', isTitle: true},
+                        {title:'dc comics', isTitle: true},
                         {title:'Characters', isTitle: false},
                         {title:'Comics', isTitle: false},
                         {title:'Movies', isTitle: false},
@@ -17,7 +17,7 @@
                         {title:'Comics', isTitle: false},
                     ]},
                     {contents:[
-                        {title:'DC', isTitle: true},
+                        {title:'dc', isTitle: true},
                         {title:'Term Of Use', isTitle: false},
                         {title:'Privacy policy (New)', isTitle: false},
                         {title:'Ad Choices', isTitle: false},
@@ -31,7 +31,7 @@
                         {title:'Contact Us', isTitle: false},
                     ]},
                     {contents:[
-                        {title:'SITES', isTitle: true},
+                        {title:'sites', isTitle: true},
                         {title:'DC', isTitle: false},
                         {title:'MAD Magazine', isTitle: false},
                         {title:'DC Kids', isTitle: false},
@@ -85,6 +85,7 @@
                             color:$main-text-color ;
                             
                             &.sans-narrow{
+                                text-transform: uppercase;
                                 font-size: 1.2rem !important;
                                 font-weight: bold;
                                 color:#fff;
