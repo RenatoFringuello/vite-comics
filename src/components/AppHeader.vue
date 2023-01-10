@@ -55,7 +55,7 @@
 
             nav.nav-links ul li{
                 margin: 0 1rem;
-                padding: 45px 0;
+                padding: 35px 0;
                 position: relative;
                 text-align: center;
                 cursor: pointer;
