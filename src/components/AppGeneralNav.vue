@@ -3,17 +3,17 @@
         data(){
             return{
                 links :[
-                    {title:'digital comics', src:'../assets/img/buy-comics-digital-comics.png'},
-                    {title:'dc merchandise', src:'../assets/img/buy-comics-merchandise.png'},
-                    {title:'subscription', src:'../assets/img/buy-comics-subscriptions.png'},
-                    {title:'comic shop locator', src:'../assets/img/buy-comics-shop-locator.png'},
-                    {title:'dc power visa', src:'../assets/img/buy-dc-power-visa.svg'}
+                    {title:'digital comics', imgName:'buy-comics-digital-comics.png'},
+                    {title:'dc merchandise', imgName:'buy-comics-merchandise.png'},
+                    {title:'subscription', imgName:'buy-comics-subscriptions.png'},
+                    {title:'comic shop locator', imgName:'buy-comics-shop-locator.png'},
+                    {title:'dc power visa', imgName:'buy-dc-power-visa.svg'}
                 ]
             }
         },
         methods: {
-            getImgPath(path){
-                return new URL(path, import.meta.url).href;
+            getImgPath(imgName){
+                return new URL(`../assets/img/${imgName}`, import.meta.url).href;
             }
         },
     }
@@ -25,7 +25,7 @@
             <nav class="nav-links">
                 <ul>
                     <li v-for="link in links" >
-                        <img :src="getImgPath(link.src)" :alt="link.title">
+                        <img :src="getImgPath(link.imgName)" :alt="link.title">
                         <span>{{link.title.toUpperCase()}}</span>
                     </li>
                 </ul>
