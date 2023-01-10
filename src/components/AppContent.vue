@@ -13,12 +13,11 @@
         methods: {
             updateBookShow(n){
                 this.nBookPerRow = n;
+                const newMax = this.maxBookRequested + (this.maxBookRequested % n);
                 if(n % 3 === 0){
-                    this.maxBookRequested -= this.maxBookRequested % n;
+                    newMax = this.maxBookRequested - (this.maxBookRequested % n);
                 }
-                else{
-                    this.maxBookRequested += this.maxBookRequested % n;
-                }
+                this.maxBookRequested = newMax;
             }
         },
         components :{
