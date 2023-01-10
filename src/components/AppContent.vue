@@ -10,6 +10,17 @@
                 maxBookRequested : 12,
             }
         },
+        methods: {
+            updateBookShow(n){
+                this.nBookPerRow = n;
+                if(n % 3 === 0){
+                    this.maxBookRequested -= this.maxBookRequested % n;
+                }
+                else{
+                    this.maxBookRequested += this.maxBookRequested % n;
+                }
+            }
+        },
         components :{
             AppContentBook,
         }
@@ -24,17 +35,35 @@
             </div>
         </div>
         <div class="container">
+            <div class="sort-selection-group">
+                <button class="sort-selection-item" @click="updateBookShow(3)">
+                    <h3>3</h3>
+                </button>
+                <button class="sort-selection-item" @click="updateBookShow(4)">
+                    <h3>4</h3>
+                </button>
+                <button class="sort-selection-item" @click="updateBookShow(6)">
+                    <h3>6</h3>
+                </button>
+            </div>
             <div class="wrapper">
                 <AppContentBook 
                     v-for="(book, i) in comicBooks"
                     v-show="i < maxBookRequested"
+                    :nBookPerRow="nBookPerRow"
                     :thumb="book.thumb"
                     :price="book.price"
                     :series="book.series"
                     :type="book.type"/>
             </div>
             <div class="btn-container">
-                <button class="sans-narrow filled" :class="comicBooks.length <= maxBookRequested ? 'disabled' :'clickable' " @click="maxBookRequested += (nBookPerRow * 2)">load more</button>
+                <button 
+                    class="sans-narrow filled" 
+                    :class="comicBooks.length <= maxBookRequested ? 'disabled' :'clickable' " 
+                    @click="maxBookRequested += (nBookPerRow * 2)">
+
+                    load more
+                </button>
             </div>
         </div>
     </section>
@@ -67,6 +96,27 @@
         .container{
             padding: 1.5rem 1rem;
 
+            .sort-selection-group{
+                display: flex;
+                justify-content: flex-end;
+
+                .sort-selection-item{
+                    width:  40px;
+                    height: 40px;
+                    background-color: #0000;
+                    color: #fff4;
+                    border:2px solid ;
+                    margin: 0 .25rem;
+                    display: flex;
+                    &:hover{
+                        color: white;
+                    }
+
+                    h3{
+                        margin: auto;
+                    }
+                }
+            }
             .wrapper{
                 display: flex;
                 flex-wrap: wrap;
@@ -75,6 +125,7 @@
             }
             .btn-container{
                 text-align: center;
+                padding-top: 1rem;
             }
         }
         
