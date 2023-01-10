@@ -6,6 +6,7 @@
         data() {
             return {
                 comicBooks : dataRaw,
+                maxBookRequested : 12,
             }
         },
         components :{
@@ -23,14 +24,16 @@
         </div>
         <div class="container">
             <div class="wrapper">
-                <AppContentBook v-for="book in comicBooks"
+                <AppContentBook 
+                    v-for="(book, i) in comicBooks"
+                    v-show="i < maxBookRequested"
                     :thumb="book.thumb"
                     :price="book.price"
                     :series="book.series"
                     :type="book.type"/>
             </div>
             <div class="btn-container">
-                <button class="sans-narrow filled">load more</button>
+                <button class="sans-narrow filled" :class="comicBooks.length <= maxBookRequested ? 'disabled' :'clickable' " @click="maxBookRequested += maxBookRequested">load more</button>
             </div>
         </div>
     </section>
