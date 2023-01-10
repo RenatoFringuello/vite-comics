@@ -25,20 +25,26 @@
 </template>
 
 <style lang="scss" scoped>
+    @use '../style/partials/variables' as *;
+    $margin-bottom:1rem;
     div.card{
-        width: calc((100% / 6) - 1.4rem);
-        margin :1rem .7rem 0rem;
+        width: calc((100% / 6) - 1rem);
+        padding-top :1rem;
+        cursor: pointer;
         
-        .img-container img{
-            width: 100%;
-            height: 178px;
-            object-fit: cover;
-            object-position:top;
+        .img-container {
+            margin-bottom: $margin-bottom;
+            img{
+                width: 100%;
+                height: 178px;
+                object-fit: cover;
+                object-position:top;
+                display: block;
+            }
         }
         .text{
             font-size: .7rem;
             color:white;
-            margin: .5rem 0;
             &.visible{
                 visibility: visible;
             }   
