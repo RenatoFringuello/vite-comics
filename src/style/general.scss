@@ -7,6 +7,7 @@
 ::after{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -35,4 +36,28 @@ nav.nav-links ul{
 }
 li a{
     text-decoration: none;
-}                
+}
+
+//buttons
+button{
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    &:hover{
+        opacity: $btn-hover;
+    }
+
+    &.outlined{
+        font-weight: 600;
+        padding:.8rem;
+        border:2px solid $main-dc-color;
+        background-color: #0000;
+    }
+
+}
+.filled{
+    font-weight: 600;
+    padding:.8rem 3.5rem;
+    background-color: $main-dc-color;
+    line-height: 50%;
+}
