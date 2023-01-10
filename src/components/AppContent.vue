@@ -6,6 +6,7 @@
         data() {
             return {
                 comicBooks : dataRaw,
+                nBookPerRow : 6,
                 maxBookRequested : 12,
             }
         },
@@ -33,7 +34,7 @@
                     :type="book.type"/>
             </div>
             <div class="btn-container">
-                <button class="sans-narrow filled" :class="comicBooks.length <= maxBookRequested ? 'disabled' :'clickable' " @click="maxBookRequested += maxBookRequested">load more</button>
+                <button class="sans-narrow filled" :class="comicBooks.length <= maxBookRequested ? 'disabled' :'clickable' " @click="maxBookRequested += (nBookPerRow * 2)">load more</button>
             </div>
         </div>
     </section>
